@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "FCP Auto-Fill",
+    "version": "1.0",
+    "description": "C'est un gros bouton rouge qui remplit automatiquement les champs de la formation FCP.",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": ["scripting", "storage"],
+    "host_permissions": ["https://mcdviala.perfmgr.com/formation/update/formation/*"],
+    "content_scripts": [
+      {
+        "matches": ["https://mcdviala.perfmgr.com/formation/update/formation/*"],
+        "js": ["popup.js"],
+        "run_at": "document_end"
+      }
+    ]
+  }
+  
